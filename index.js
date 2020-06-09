@@ -8,7 +8,7 @@ and 30 respectively. Create another value called name and give it the value of y
 let principal = 200000;
 let interestRate = 0.05;
 let years = 30;
-let name = 'Anna';
+var name = 'Anna';
 
 
 // 🏡 Task 1.5: Simple Math
@@ -45,7 +45,7 @@ let n1 = Math.pow((1 + monthlyInterestRate), periods);
 let n2 = n1 * monthlyInterestRate;
 let numerator = principal * n2;
 let denominator = n1 - 1;
-let monthlyRate = numerator/denominator;
+var monthlyRate = numerator/denominator;
 
 console.log(monthlyRate);
 
@@ -59,11 +59,10 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 `N` = Number of periods (monthly mortgage payments)
 */
 
-function mortgageCalculator() {
-    console.log('(name), your monthly rate is $(monthlyRate)');
+//function mortgageCalculator() { 
+    //console.log(`${name} your monthly rate is ${monthlyRate}`); }
 
-}
-
+//console.log(mortgageCalculator());
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` 
@@ -73,9 +72,12 @@ For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
 
+function mortgageCalculator(P,I,N){
+    let newvalue = P *( I * Math.pow(1 + I), N) / (Math.pow((1 + I), N) -1);
+    return newvalue;
+}
 
-
-
+console.log(mortgageCalculator(200000, 0.05, 30));
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 
