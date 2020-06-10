@@ -49,6 +49,11 @@ var monthlyRate = numerator/denominator;
 
 console.log(monthlyRate);
 
+function mortgageCalculator() { 
+    return (`${name} your monthly rate is ${monthlyRate}`); 
+}
+console.log(mortgageCalculator());
+
 // 🏡 Task 3: Function
 /* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns 
 a sentence "{Name}, your monthly rate is ${monthlyRate}"
@@ -59,10 +64,7 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 `N` = Number of periods (monthly mortgage payments)
 */
 
-function mortgageCalculator() { 
-    console.log(`${name} your monthly rate is ${monthlyRate}`); }
 
-console.log(mortgageCalculator());
 
 // 🏡 Task 4: Arguments and Parameters
 /* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` 
@@ -75,12 +77,12 @@ let P = principal;
 let I = interestRate;
 let N = years;
 
-/*function mortgageCalculator(P,I,N){
+function mortgageCalculator(P,I,N){
     let newvalue = P *( I * Math.pow(1 + I), N) / (Math.pow((1 + I), N) -1);
     return newvalue;
-}*/
+}
 
-//console.log(mortgageCalculator(200000, 0.05, 30));
+console.log(mortgageCalculator(200000, 0.05, 30));
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 
@@ -95,8 +97,8 @@ interest rate by 5% you'd do monthlyRate * 1.05.
 */
 
 function mortgageCalculator(creditScore, P, N, I){
-        if (creditScore > 740) {
-       I = I * 0.95;
+       if (creditScore > 740) {
+     I = I * 0.95;
    } else (creditScore < 660); {
        I = I * 1.05;
    }
@@ -123,13 +125,13 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 function variableInterestRate (P, I, N){
-for (let I = 0.02; I <= 0.06, I++; )
-{let monthlyRate = (P *( I * Math.pow(1 + I), N) / (Math.pow((1 + I), N) -1))
-}
-console.log( `${name}, with an interest rate of ${I} your monthly rate is ${monthlyRate}.`)
-}
-
-console.log(variableInterestRate(200000, 0.04, 30))
+    for (i=(I -0.02); i < (I+0.02); i + 0.005);
+    {let monthlyRate = (P *( I * Math.pow(1 + I), N) / (Math.pow((1 + I), N) -1));
+    }
+    console.log(`${name} with an interest rate of ${I} your monthly rate is ${monthlyRate}`);
+    }
+    
+    console.log(variableInterestRate(200000, 0.04, 30));
 
 // 🌟🌟🌟 STRETCH 🌟🌟🌟//
 
